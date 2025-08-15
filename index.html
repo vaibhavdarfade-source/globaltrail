@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Pastel Planner – Your Next Trip, Perfected</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#planner">Planner</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h1>Pastel Planner</h1>
+    <p>Minimalist itineraries for mindful travelers.</p>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      We design calm, curated travel plans for upper-middle-class explorers who value
+      time, aesthetics, and experiences over spreadsheets. Tell us where and when,
+      and we’ll craft a printable day-by-day guide in seconds.
+    </p>
+  </section>
+
+  <section id="planner">
+    <h2>Build Your Itinerary</h2>
+    <form id="tripForm">
+      <label>Destination
+        <input name="destination" required placeholder="e.g. Kyoto"/>
+      </label>
+
+      <label>Dates
+        <input type="date" name="start" required/>
+        <input type="date" name="end" required/>
+      </label>
+
+      <label>Travel Style
+        <select name="style">
+          <option>Relaxed</option>
+          <option>Balanced</option>
+          <option>Packed</option>
+        </select>
+      </label>
+
+      <label>Budget (USD / day)
+        <input type="number" name="budget" min="50" value="300"/>
+      </label>
+
+      <label>Must-see / notes
+        <textarea name="notes" rows="3" placeholder="Cherry blossoms, vegan cafés…"></textarea>
+      </label>
+
+      <button type="submit">Generate Itinerary</button>
+    </form>
+
+    <article id="output" hidden>
+      <h3>Your Custom Plan</h3>
+      <pre></pre>
+      <button onclick="window.print()">Print / Save PDF</button>
+    </article>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email us at <a href="mailto:hello@pastelplanner.com">hello@pastelplanner.com</a></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
